@@ -1,4 +1,4 @@
-# Proyecto React JS - CASSA
+# Proyecto React JS 
 
 ### Instalación del proyecto
 
