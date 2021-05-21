@@ -54,8 +54,6 @@ El proyecto cuenta con librerías con las cuales podrá comenzar a desarrollar s
 
 * Se recomienda no crear componentes demasiado complejos
 * Separe los componentes complejos, en componentes más pequeños
-* Los archivos estáticos deben colocarse dentro de la carpeta ``react-cassa/public``
-* El css que sea global, debe colocarse en el ``react-cassa/src/index.css``
 * Se recomienda usar componentes de tipo Función, ya que estos presentan como mejora los **Hooks**
 
 
