@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Input, Select, Switch, DatePicker, Radio, TimePicker, Checkbox, InputNumber, Col, Row, Descriptions } from 'antd';
 import moment from 'moment';
-// import { withTranslation } from "react-i18next";
-import CustomInputMoney from './InputMoney'
+//  import { withTranslation } from "react-i18next";
+// import CustomInputMoney from './InputMoney'
 const { Option } = Select;
 const { TextArea } = Input;
 
@@ -147,8 +147,8 @@ function ConstruirFormularios({ campos, state, setState, form, t, label }) {
             case 'textarea':
                 return <TextArea rows={e.rows || '3'} value={state[e.name]} name={e.name} onChange={onChange} readOnly={e.readOnly ? true : false} disabled={e.disabled ? true : false} showCount />
                 break;
-            case 'money':
-                return <CustomInputMoney className='ant-input' onValueChange={(evt) => handleSelect(evt, e.name)} value={state[e.name] || 0} cantDecimales={4}/>
+            // case 'money':
+            //     return <CustomInputMoney className='ant-input' onValueChange={(evt) => handleSelect(evt, e.name)} value={state[e.name] || 0} cantDecimales={4}/>
                 // return <InputNumber
                 //     style={{ width: '100%' }}
                 //     value={state[e.name]} name={e.name}
@@ -159,9 +159,9 @@ function ConstruirFormularios({ campos, state, setState, form, t, label }) {
                 //     readOnly={e.readOnly ? true : false}
                 //     min={0}
                 // />
-                break;
-                case 'money2':
-                return <CustomInputMoney className='ant-input' onValueChange={(evt) => handleSelect(evt, e.name)} value={state[e.name] || 0} cantDecimales={4}/>
+                // break;
+                // case 'money2':
+                // return <CustomInputMoney className='ant-input' onValueChange={(evt) => handleSelect(evt, e.name)} value={state[e.name] || 0} cantDecimales={4}/>
                 // return <InputNumber
                 //     style={{ width: '100%' }}
                 //     value={state[e.name]} name={e.name}
@@ -172,7 +172,7 @@ function ConstruirFormularios({ campos, state, setState, form, t, label }) {
                 //     readOnly={e.readOnly ? true : false}
                 //     min={0}
                 // />
-                break;
+                // break;
             case 'number':
                 return <InputNumber
                     style={{ width: '100%' }}
@@ -218,7 +218,7 @@ function ConstruirFormularios({ campos, state, setState, form, t, label }) {
                                 rules={[
                                     {
                                         required: e.required,
-                                        message: t('Label_Requerido'),
+                                        message: 'Campo Requerido',
                                     },
                                 ]}
                             >
@@ -241,4 +241,5 @@ function ConstruirFormularios({ campos, state, setState, form, t, label }) {
     );
 }
 
-export default withTranslation()(ConstruirFormularios)
+// export default withTranslation()(ConstruirFormularios)
+export default ConstruirFormularios

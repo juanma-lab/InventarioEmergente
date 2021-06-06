@@ -1,39 +1,81 @@
 export const data = [
     {
-        title: 'Opción Principal',
+        title: 'Dashboard',
         class: 'fa fa-dashboard',
         subMenu: [
-            { 
-                href: '/about',
+            {
+                href: '/Indicadores',
                 class: 'fa fa-circle-o',
-                title: 'OP 1'
-            },
-            { 
-                href: '',
-                class: 'fa fa-circle-o',
-                title: 'v2'
+                title: 'Indicadores de ventas'
+
             }
         ]
     },
     {
-        title: 'Elementos de Ejemplo',
-        class: 'fa fa-files-o',
+        title: 'Data Maestra',
+        class: 'fa fa-dashboard',
         subMenu: [
-            { 
-                href: '/Tables',
+            {
+                href: '/Empleado',
                 class: 'fa fa-circle-o',
-                title: 'Tablas'
+                title: 'Empleados'
             },
-            { 
-                href: '/Cards',
+            {
+                href: '/Cliente',
                 class: 'fa fa-circle-o',
-                title: 'Cards'
+                title: 'Clientes'
             },
-            { 
-                href: '/Calendario',
+
+        ]
+    },
+    {
+        title: 'Inventario',
+        class: 'fa fa-dashboard',
+        subMenu: [
+            {
+                href: '/Inventario',
                 class: 'fa fa-circle-o',
-                title: 'Calendario'
+                title: 'Ingreso de productos'
+
             }
         ]
-    }
+    },
+    
+    // {
+    //     title: 'Opción Principal',
+    //     class: 'fa fa-dashboard',
+    //     subMenu: [
+    //         { 
+    //             href: '/about',
+    //             class: 'fa fa-circle-o',
+    //             title: 'OP 1'
+    //         },
+    //         { 
+    //             href: '',
+    //             class: 'fa fa-circle-o',
+    //             title: 'v2'
+    //         }
+    //     ]
+    // },
+    // {
+    //     title: 'Elementos de Ejemplo',
+    //     class: 'fa fa-files-o',
+    //     subMenu: [
+    //         { 
+    //             href: '/Tables',
+    //             class: 'fa fa-circle-o',
+    //             title: 'Tablas'
+    //         },
+    //         { 
+    //             href: '/Cards',
+    //             class: 'fa fa-circle-o',
+    //             title: 'Cards'
+    //         },
+    //         { 
+    //             href: '/Calendario',
+    //             class: 'fa fa-circle-o',
+    //             title: 'Calendario'
+    //         }
+    //     ]
+    // }
 ]

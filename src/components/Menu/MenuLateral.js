@@ -2,7 +2,7 @@ import React from 'react'
 import { UserPanel } from './UserPanel'
 import { Accesos } from './Accesos'
 import { data } from './DataMenu'
-import logo from '../../img/Logo.jpg'
+// import logo from '../../img/Logo.jpg'
 
 export const MenuLateral = () => {
   return (

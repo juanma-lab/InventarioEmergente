@@ -8,9 +8,10 @@ import Tables from './../Elementos/Tablas'
 import Cards from './../Elementos/Cards'
 import Calendario from './../Elementos/Calendario'
 import Dashboard from './../Elementos/index'
-
-
-
+import Empleado from './../Empleados/index'
+import Cliente from './../Clientes/index'
+import Producto from './../Inventario/index'
+import Indicadores from './../Indicadores/index'
 function Enrutador(props) {
     return (
         <Switch>
@@ -25,6 +26,18 @@ function Enrutador(props) {
             </Route>
             <Route path="/Calendario">
                 <Calendario/>
+            </Route>
+            <Route path="/Empleado">
+                <Empleado/>
+            </Route>
+            <Route path="/Cliente">
+                <Cliente/>
+            </Route>
+            <Route path="/Inventario">
+                <Producto/>
+            </Route>
+            <Route path="/Indicadores">
+                <Indicadores/>
             </Route>
             <Route path="/">
                 <Dashboard/>
