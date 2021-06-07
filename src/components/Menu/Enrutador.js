@@ -12,6 +12,8 @@ import Empleado from './../Empleados/index'
 import Cliente from './../Clientes/index'
 import Producto from './../Inventario/index'
 import Indicadores from './../Indicadores/index'
+import Productos from './../Productos/index'
+import Proveedor from './../Proveedor/index'
 function Enrutador(props) {
     return (
         <Switch>
@@ -38,6 +40,12 @@ function Enrutador(props) {
             </Route>
             <Route path="/Indicadores">
                 <Indicadores/>
+            </Route>
+            <Route path="/Productos">
+                <Productos/>
+            </Route>
+            <Route path="/Proveedor">
+                <Proveedor/>
             </Route>
             <Route path="/">
                 <Dashboard/>

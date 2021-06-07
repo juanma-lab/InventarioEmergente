@@ -25,6 +25,16 @@ export const data = [
                 class: 'fa fa-circle-o',
                 title: 'Clientes'
             },
+            {
+                href: '/Productos',
+                class: 'fa fa-circle-o',
+                title: 'Productos'
+            },
+            {
+                href: '/Proveedor',
+                class: 'fa fa-circle-o',
+                title: 'Proveedor'
+            },
 
         ]
     },

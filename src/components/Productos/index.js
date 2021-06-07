@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Calendar, Spin, Form, Card, Table, Button, Tooltip } from 'antd';
 import ConstruirFormularios from '../Elementos/ConstruirFormularios'
@@ -6,7 +5,7 @@ import { path } from '../../config';
 import Axios from 'axios';
 
 let editar = 0
-function Empleado() {
+function Productos() {
     const [form] = Form.useForm();
 
 
@@ -20,7 +19,7 @@ function Empleado() {
 
     const empleados = async () => {
 
-        const URL = `${path}/DatosMaestros/GetZafras`
+        const URL = `${path}/Productos/ObtenerProductos`
 
         const nominacion = await Axios.get(URL)
         console.log("resultado de proveedores", nominacion.data);
@@ -28,11 +27,11 @@ function Empleado() {
 
     }
     const campos = [
-        { label: 'Nombre empleado', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'nombres', type: 'text', classname: 'col-md-4' },
-        { label: 'Apellido empleado', placeholder: 'Ingrese el Apellido del empleado', required: true, name: 'apellidos', type: 'text', classname: 'col-md-4' },
-        { label: 'Numero Telefono', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'Telefono', type: 'text', classname: 'col-md-4' },
-        { label: 'Numero de DUI', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'DUI', type: 'number', classname: 'col-md-4' },
-        { label: 'Fecha nacimiento', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'fecha_nacimiento', type: 'datepicker', classname: 'col-md-4' },
+        { label: 'Codigo de Producto', placeholder: 'ID Producto', required: true, name: 'IdProducto', type: 'text', classname: 'col-md-4', disabled:true },
+        { label: 'Nombre del producto', placeholder: 'Ingrese el Nombre del producto', required: true, name: 'NombreProducto', type: 'text', classname: 'col-md-4' },
+        // { label: 'Numero Telefono', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'Telefono', type: 'text', classname: 'col-md-4' },
+        // { label: 'Numero de DUI', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'DUI', type: 'number', classname: 'col-md-4' },
+        // { label: 'Fecha nacimiento', placeholder: 'Ingrese el nombre del empleado', required: true, name: 'fecha_nacimiento', type: 'datepicker', classname: 'col-md-4' },
         //   { label: 'Nombre empleado', placeholder: 'Ingrese el nombre del empleado', required: true, name: '', DS_Option: '', type: '', classname: '', options: '' },
 
         //  { label: 'Nombre empleado', placeholder: 'Ingrese el nombre del empleado', required: true, name: '', DS_Option: '', type: '', classname: '', options: '' }
@@ -40,34 +39,17 @@ function Empleado() {
     ]
     const columns = [
         {
-            title: 'Nombres',
-            dataIndex: 'nombres',
-            key: 'nombres',
+            title: 'Codugo del Producto',
+            dataIndex: 'IdProducto',
+            key: 'IdProducto',
 
         },
         {
-            title: 'Apellidos',
-            dataIndex: 'apellidos',
-            key: 'apellidos',
+            title: 'Nombre del Producto',
+            dataIndex: 'NombreProducto',
+            key: 'NombreProducto',
 
-        }, {
-            title: 'DUI',
-            dataIndex: 'DUI',
-            key: 'DUI',
-
-        },
-        {
-            title: 'Telefono',
-            dataIndex: 'Telefono',
-            key: 'Telefono',
-
-        },
-        {
-            title: 'Fecha Nacimiento',
-            dataIndex: 'fecha_nacimiento',
-            key: 'fecha_nacimiento',
-
-        },
+        }, 
         {
             title: 'Acciones',
             dataIndex: 'Accion',
@@ -75,7 +57,7 @@ function Empleado() {
             render: (row, e) => (
                 <div>
                     <Tooltip title="Editar registro" >
-                        <Button type="primary" onClick={() => clickEdit(e)} key={e.id_empleado}  >Editar</Button>
+                        <Button type="primary" onClick={() => clickEdit(e)} key={e.IdProducto}  >Editar</Button>
                     </Tooltip>
                 </div>
             )
@@ -94,7 +76,7 @@ function Empleado() {
             editar = 0
         }
         else {
-            if (state.nombres && state.apellidos && state.Telefono && state.DUI && state.fecha_nacimiento) {
+            if (state.NombreProducto ) {
                 console.log('guardar correcto', state)
             }
             else {
@@ -163,4 +145,4 @@ function Empleado() {
     );
 }
 
-export default Empleado;
+export default Productos;
